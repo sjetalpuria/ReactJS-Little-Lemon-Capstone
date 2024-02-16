@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "Markazi Text", serif;
+}
+ul, li,Link, p{
+  font-family: "Karla", sans-serif;
+  
+}
 .App {
   text-align: center;
 }
@@ -26,6 +35,61 @@
 
 .App-link {
   color: #61dafb;
+}
+
+/* Nav */
+.navContainer
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgFlex
+{
+  width: 300px;
+}
+.navList
+{
+  display: inline-flex;
+   list-style-type: none; 
+  
+}
+.navList li
+{
+  
+  margin: 10px;
+}
+.navList li a
+{
+  text-decoration: none;
+  color:black; 
+}
+/* Nav */
+.footerContainer
+{
+  display: flex;
+  align-items:start;
+  justify-content: center;
+}
+.footerList
+{
+  list-style-type: none; 
+
+}
+.footerItem a, .footerItem h2
+{
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width:768px){
+  .imgFlex
+{
+  width: 100px;
+}
 }
 
 @keyframes App-logo-spin {
