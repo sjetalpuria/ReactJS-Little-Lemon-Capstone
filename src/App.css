@@ -47,7 +47,19 @@ button
 .App-link {
   color: #61dafb;
 }
-
+/* Mobile Nav */
+.bar
+{
+  width:20px; 
+  height:3px;
+  background-color:black;
+  margin:5px 0;
+}
+.menuIcon
+{
+  display:none;
+  cursor:pointer;
+}
 /* Nav */
 .navContainer
 {
@@ -56,16 +68,33 @@ button
   justify-content: space-evenly;
 }
 
+  
+
+
 .imgFlex
 {
   width: 300px;
 }
 .navList
 {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
    list-style-type: none; 
   
 }
+.navList.visible
+{
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 100%;
+    background-color: #495E57;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
 .navList li
 {
   
@@ -176,12 +205,44 @@ button
 }
 
 @media screen and (max-width:768px){
+  .menuIcon {
+    display: block;
+  }
+  .navList
+  {
+    display:none;
+  }
+  .navList.visible
+  {
+   z-index:1000;
+   background-color: #333;
+   display: flex;
+   padding: 20px 0;
+  }
+  .navContainer{
+    background:#fff;
+    padding: 10px 8%;
+  }
+  .navList li a
+  {
+  text-decoration: none;
+  color:white; 
+  }
+  .bar{
+    background: #333;
+  }
   .imgFlex
+  {
+  width: 300px;
+  }
+
+.headerImage
 {
-  width: 100px;
-}
+  display: none;
 }
 
+}
+/* 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -189,5 +250,5 @@ button
   to {
     transform: rotate(360deg);
   }
-}
+} */
 

@@ -8,8 +8,8 @@ class Main extends Component {
     render(){
         return (
           <div>
-                 <Routes>
-                 <Route path="/">Home</Route>
+                <Routes>
+                <Route path="/">Home</Route>
                 <Route>About</Route>
                 <Route>Menu</Route>
                 <Route>Reservations</Route>
