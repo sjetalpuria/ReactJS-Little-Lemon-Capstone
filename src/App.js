@@ -1,18 +1,13 @@
 import './App.css';
-import Header from './Header.js';
-import Nav from './Nav.js';
-import Main from'./Main.js';
-import Footer from './Footer.js';
-
+import Nav from './Nav'
+import Main from './Main'
 
 
 function App() {
   return (
     <div className="App">
-     <Nav/>
-     <Header/>
-     <Main/>
-     <Footer/>
+      <Nav/>
+      <Main/>
     </div>
   );
 }

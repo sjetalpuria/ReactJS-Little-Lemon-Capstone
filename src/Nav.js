@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logoLittle from './assets/Little_lemon_logo.png';
 class Nav extends Component {
     render(){
@@ -10,27 +10,27 @@ class Nav extends Component {
             <img className="imgFlex"src={logoLittle}/>   
              <ul className='navList'>
                 <li className='navItem'>
-                 <NavLink to="/" className="navLink"> Home </NavLink>
+                 <Link to="/" > Home </Link>
                 </li>
 
                 <li>
-                 <NavLink to="/about" className="navLink"> About </NavLink>
+                 <Link to="" > About </Link>
                 </li>
 
                 <li>
-                 <NavLink to="/menu" className="navLink"> Menu </NavLink>
+                 <Link to=""> Menu </Link>
                 </li>
 
                 <li>
-                 <NavLink to="/reservations" className="navLink"> Reservations </NavLink>
+                 <Link to=""> Reservations </Link>
                 </li>
 
                 <li>
-                 <NavLink to="/order" className="navLink"> Order Online </NavLink>
+                 <Link to="" > Order Online </Link>
                 </li>
 
                 <li>
-                 <NavLink to="/login" className="navLink">  Login </NavLink>
+                 <Link to="" >  Login </Link>
                 </li>
               </ul> 
            </div>
