@@ -18,19 +18,11 @@ button
   padding: 10px 30px 10px 30px;
   border: none;
 }
-.App {
-  text-align: left;
-}
+
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -61,15 +53,15 @@ button
   cursor:pointer;
 }
 /* Nav */
+nav{
+  z-index: 10001;
+}
 .navContainer
 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-
-  
-
 
 .imgFlex
 {
@@ -84,20 +76,17 @@ button
 }
 .navList.visible
 {
-    flex-direction: column;
-    position: absolute;
-    top: 40px;
-    right: 0;
-    width: 100%;
-    background-color: #495E57;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.3s ease-in-out;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  width: 80%;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  margin:10px;
+}
 .navList li
 {
-  
   margin: 10px;
 }
 .navList li a
@@ -216,7 +205,11 @@ button
   {
    z-index:1000;
    background-color: #333;
+   width:100%;
    display: flex;
+   flex-direction: column;
+   top: 100px;
+   position: absolute;
    padding: 20px 0;
   }
   .navContainer{

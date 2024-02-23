@@ -1,14 +1,10 @@
-import React, { Component} from 'react';
-import BookingForm from './BookingForm.js';
+import React from 'react';
+import BookingForm from './BookingForm';
 
-class BookingPage extends Component {
-    render(){
-        return (
-           <div>
-            <h1>Booking page</h1>
-            <BookingForm/>
-           </div>
-        );
-    }
-}
+const BookingPage = (props) => {
+    return (
+         <BookingForm availableTime={props.availableTime} dispatch={props.dispatch} SubmitForm={props.SubmitForm} />
+     );
+};
+
 export default BookingPage;

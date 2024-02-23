@@ -1,21 +1,16 @@
-import React, { Component, useState} from 'react';
+import React, {useState} from 'react';
 import { Link } from "react-router-dom";
 import logoLittle from './assets/Little_lemon_logo.png';
-const Nav =() => {
-  {
+const Nav = () => {
     const [mobMenu,setmobMenu] = useState("false");
     
-    const switchMenu = () =>{
+    const switchMenu = () => {
       setmobMenu(!mobMenu);
     }
-
-
-
      return (
-         <nav>
-            <div className={`navContainer ${mobMenu ? "open" : ""}`}>
-            <a href='/'>
-              <img className="imgFlex" src={logoLittle}/> 
+         <nav className={`navContainer ${mobMenu ? "open" : ""}`}>
+            <a href='/' >
+              <img className="imgFlex" src={logoLittle} alt="App Logo"/> 
             </a>
           {/* Mobile Nav */}
           <div className='menuIcon' onClick={switchMenu}>
@@ -39,11 +34,9 @@ const Nav =() => {
 
                 <li> <Link to="/" >  Login </Link> </li>
               </ul> 
-           </div>
            
          </nav>
         );
-    }
 }
 
 export default Nav;
