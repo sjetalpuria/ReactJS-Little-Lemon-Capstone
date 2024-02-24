@@ -3,7 +3,12 @@ import BookingForm from './BookingForm';
 
 const BookingPage = (props) => {
     return (
-         <BookingForm availableTime={props.availableTime} dispatch={props.dispatch} SubmitForm={props.SubmitForm} />
+     <div className='bookingContainer'>
+        <h1 className='booking'> Booking Form</h1>
+         <BookingForm availableTime={props.availableTime} 
+                    dispatch={props.dispatch} SubmitForm={props.SubmitForm} />
+
+     </div>
      );
 };
 

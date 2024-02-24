@@ -6,7 +6,7 @@ import {Route, Routes, useNavigate} from 'react-router-dom';
 
 const Main = () => {
     //
-    const seedRandom = function (seed)
+    const seedRandom = function(seed)
     {
         var m = 2**35 - 31;
         var a = 185852;
@@ -14,21 +14,21 @@ const Main = () => {
 
         return function()
         {
-            return (s=s*a % m)/m;
-        }
+            return (s=s*a%m)/m;
+        };
     }
-    const fetchAPI = function (date)
+    const fetchAPI = function(date)
     {
         let result = [];
         let random = seedRandom(date.getDate());
         for(let i=17; i<=23;i++)
         {
-            if(random()<0.5)
+            if(random()< 0.5)
             {
                 result.push(i+":00");
             }
 
-            if(random() > 0.5)
+            if(random() < 0.5)
             {
                 result.push(i+":30");
             }
@@ -39,20 +39,20 @@ const Main = () => {
     {
         return true;
     }
-    const originalState = {availableTime: fetchAPI (new Date())};
+    const originalState = {availableTime: fetchAPI(new Date())};
     const[state,dispatch] = useReducer(updatedTime, originalState);
 
     function updatedTime(state,date)
     {
-        return {availableTIme:fetchAPI(new Date())}
+        return {availableTIme:fetchAPI(new Date(date))}
     }
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
      function SubmitForm(formData)
      {
         if (submitAPI(formData))
         {
-            navigate("/confirmed")
+            navigate("/confirmed");
         }
      }
      //
