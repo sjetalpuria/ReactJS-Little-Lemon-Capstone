@@ -10,8 +10,9 @@ ul, li,Link, p{
 
 button
 {
+  white-space: nowrap;
   background-color: #f4ce14;
-  color:black;
+  color:black !important;
   font-family: "Karla", sans-serif;
   font-weight: 600;
   border-radius: 16px;
@@ -19,6 +20,11 @@ button
   border: none;
 }
 
+ a, a:visited
+ {
+  color:#282c34 !important;
+  text-decoration: none !important;
+ }
 
 .App-logo {
   height: 40vmin;
@@ -105,7 +111,7 @@ nav{
 }
 .headerContent 
 {
-  width: 400px;
+  width: 100%;
 
 }
 
@@ -136,10 +142,11 @@ nav{
   align-items: center;
   justify-content:space-evenly;
   margin-top: 20px;
+  margin:100px;
 }
 .mainContent 
 {
-  width: 400px;
+  width: 100%;
 }
 .img
 {
@@ -148,14 +155,21 @@ nav{
 }
 /* Card */
 
-.card
+.cardContainer
 {
   margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #EDEFEE;
   margin:100px;
+ 
+}
+
+.card{
+  background-color: #EDEFEE;
+  margin-right:10px;
+  width: 100%;
+  height:450px;
 }
 
 .cardImg
@@ -165,6 +179,10 @@ nav{
   object-fit: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+}
+.cardIcon
+{
+  width: 24px;
 }
 .containerFlex, p 
 {
@@ -203,7 +221,7 @@ input, select
 {
   font-family: "Karla", sans-serif;
   font-weight: 600;
-  color:#D9D9D9;
+  color:black;
   border-radius: 8px;
   height: 30px;
   border: 2px solid #f1f1f1;
@@ -217,14 +235,21 @@ input, select
   border-radius: 16px;
   border: none;
 }
-
-
+/* Confirm Booking */
+.bookingConfirmed
+{
+  text-align: center;
+}
+span{
+  color:#4D5E56;
+}
 /* Footer */
 .footerContainer
 {
   display: flex;
   align-items:start;
   justify-content: space-evenly;
+  width: 100%;
 }
 .footerList
 {
@@ -237,6 +262,7 @@ input, select
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+
 }
 
 @media screen and (max-width:768px){
@@ -279,7 +305,15 @@ input, select
 {
   display: none;
 }
-
+.cardContainer
+{
+  flex-direction: column;
+  
+}
+.card
+{
+  margin-bottom:20px;
+}
 }
 /* 
 @keyframes App-logo-spin {

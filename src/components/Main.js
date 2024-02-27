@@ -1,6 +1,6 @@
-import React, {useReducer } from 'react';
-import Header from './Header.js';
-import confirmBooking from './confirmBooking';
+import React, {useReducer, useEffect } from 'react';
+import Header from './Header';
+import ConfirmBooking from './ConfirmBooking';
 import BookingPage from './BookingPage'
 import {Route, Routes, useNavigate} from 'react-router-dom';
 
@@ -34,21 +34,22 @@ const Main = () => {
             }
         }
         return result;
-    }
+    }; 
+
     const submitAPI = function(formData)
     {
         return true;
-    }
+    };
     const originalState = {availableTime: fetchAPI(new Date())};
     const[state,dispatch] = useReducer(updatedTime, originalState);
 
     function updatedTime(state,date)
     {
-        return {availableTIme:fetchAPI(new Date(date))}
+        return {availableTime:fetchAPI(new Date(date))}
     }
 
     const navigate = useNavigate();
-     function SubmitForm(formData)
+     function submitForm(formData)
      {
         if (submitAPI(formData))
         {
@@ -57,7 +58,7 @@ const Main = () => {
      }
      //
         return (
-          <div>
+          <main>
                 <Routes>
                 <Route path="/" element={<Header/>}></Route>
                {/*
@@ -70,12 +71,12 @@ const Main = () => {
                 <Route path='/booking' element={<BookingPage
                                                 availableTime={state}
                                                 dispatch={dispatch}
-                                                submitForm={SubmitForm}/>}/>
+                                                submitForm={submitForm}/>}/>
 
-                <Route path ="/confirmed" element={<confirmBooking/>}></Route>
+                <Route path ="/confirmed" element={<ConfirmBooking />}></Route>
                </Routes>
               
-          </div>
+          </main>
            
         )
     }

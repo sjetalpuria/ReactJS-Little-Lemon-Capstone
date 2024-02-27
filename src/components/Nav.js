@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from "react-router-dom";
-import logoLittle from './assets/Little_lemon_logo.png';
+import logoLittle from '../assets/Little_lemon_logo.png';
 const Nav = () => {
     const [mobMenu,setmobMenu] = useState("false");
     

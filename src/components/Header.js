@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import headerImage from './assets/restauranfood.jpg'
+import headerImage from '../assets/restauranfood.jpg'
 
 
 const Header =() => {
@@ -15,7 +15,7 @@ const Header =() => {
              <p>We are a family owned Mediterranean restaurant, focused on traditional
                 recipes served with a modern twist. </p>
 
-             <button><Link to="/booking">Reserve a Table</Link></button>
+             <button className='black'><Link to="/booking">Reserve a Table</Link></button>
             </div>
 
             <div>
